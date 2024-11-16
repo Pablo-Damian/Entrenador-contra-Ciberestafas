@@ -28,7 +28,7 @@ tw-story {
   padding: 20px;*/
 }
   color: #2c3e50;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
 
 .contenedor-imagen {
@@ -43,7 +43,7 @@ img {
   /*box-shadow: 0 2px 5px rgba(0,0,0,0.2);*/
 }
 
-.opciones a {
+/*.opciones a {
   display: block;
   background-color: #3498db;
   color: white;
@@ -56,20 +56,20 @@ img {
 
 .opciones a:hover {
   background-color: #2980b9;
-}
+}*/
 
 .mensaje-error {
-  color: #e74c3c;
+  /*color: red;*/
   padding: 10px;
   margin: 10px 0;
-  border-left: 4px solid #e74c3c;
+  /*border-left: 4px solid #e74c3c;*/
 }
 
 .mensaje-exito {
-  color: #27ae60;
+  color: lightgreen;
   padding: 10px;
   margin: 10px 0;
-  border-left: 4px solid #27ae60;
+  /*border-left: 4px solid #27ae60;*/
 }
 
 .titulo {
@@ -95,6 +95,11 @@ img {
   .titulo h2 {
     font-size: 1em;
   }
+}
+
+/* NO SE MUESTRAN LAS FLECHAS (ATRÁS-ADELANTE) */
+tw-sidebar {
+	display: none;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">$(document).ready(function() {
   window.intentos = 0;
 //});
@@ -117,18 +122,8 @@ img {
   }
   document.addEventListener('click', initAudio);
   */
-});</script><tw-passagedata pid="1" name="Inicio" tags="" position="300,200" size="100,100">&lt;!-- StoryTitle
-¡Alerta Digital! - Entrenador contra Ciberestafas
-
-:: StoryData
-{
-    &quot;ifid&quot;: &quot;XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX&quot;,
-    &quot;format&quot;: &quot;Harlowe 3.3.9&quot;
-}
-
-:: Inicio--&gt;
-(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;div class=&quot;titulo&quot;&gt;
-(text-style:&quot;fade-in-out&quot;)[&lt;h1&gt;NIVEL 1&lt;/h1&gt;]
+});</script><tw-passagedata pid="1" name="Inicio" tags="" position="300,400" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;div class=&quot;titulo&quot;&gt;
+&lt;!--(text-style:&quot;fade-in-out&quot;)[&lt;h1&gt;NIVEL 1&lt;/h1&gt;]--&gt;
 &lt;h2&gt;No solo &quot;El cartero llama dos veces&quot;&lt;/h2&gt;
 &lt;/div&gt;]
 
@@ -149,7 +144,7 @@ img {
 &lt;audio autoplay loop&gt;
     &lt;source src=&quot;assets/sound/music_fx_jazz_tango_Ramon.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
     Your browser does not support the audio element.
-&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="2" name="Nivel 1" tags="" position="500,300" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;h2&gt;RING! RING!...&lt;/h2&gt;
+&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="2" name="Nivel 1" tags="" position="500,500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;h2&gt;RING! RING!...&lt;/h2&gt;
 &lt;div class=&quot;contenedor-imagen&quot;&gt;
 &lt;img src=&quot;assets/img/celular_con_llamada_desconocida.png&quot; alt=&quot;celular con llamada desconocida&quot; /&gt;
 &lt;/div&gt;]
@@ -187,12 +182,12 @@ img {
 &lt;audio autoplay loop&gt;
     &lt;source src=&quot;assets/sound/ringtone-retro.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
     Your browser does not support the audio element.
-&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="3" name="Incorrecta 1" tags="" position="500,500" size="100,100">&lt;!--Incorrecta 1--&gt;
+&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="3" name="Incorrecta 1" tags="" position="500,700" size="100,100">&lt;!--Incorrecta 1--&gt;
 {
     (set: $intentos to it + 1)
 }
 &lt;div class=&quot;mensaje-error&quot;&gt;
-&lt;p&gt;(text-style:&quot;fade-in-out&quot;)[&#39;&#39;¡Cuidado Ramón!&#39;&#39; ]Esa no es la opción más segura.&lt;/p&gt;
+&lt;p&gt;(text-style:&quot;fade-in-out&quot;)[(text-colour:red)[&lt;h2&gt;&#39;&#39;¡Cuidado Ramón!&#39;&#39;&lt;/h2&gt; ]]Esa no es la opción más segura.&lt;/p&gt;
 
 &lt;div class=&quot;contenedor-imagen&quot;&gt;
 &lt;img src=&quot;assets/img/DonRamon_ha_perdido.png&quot; alt=&quot;Don Ramón ha perdido.png&quot; /&gt;
@@ -208,9 +203,9 @@ img {
 &lt;audio autoplay&gt;
     &lt;source src=&quot;assets/sound/resp-incorrecta.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
     Your browser does not support the audio element.
-&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="4" name="Correcta 1" tags="" position="700,300" size="100,100">&lt;!--Correcta 1--&gt;
+&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="4" name="Correcta 1" tags="" position="700,500" size="100,100">&lt;!--Correcta 1--&gt;
 &lt;div class=&quot;mensaje-exito&quot;&gt;
-&lt;p&gt;¡Excelente decisión! 🌟&lt;/p&gt;
+&lt;p&gt;(text-style:&quot;fade-in-out&quot;)[(text-colour:green)[&lt;h2&gt;&#39;&#39;¡Excelente decisión! 🌟&#39;&#39;&lt;/h2&gt; ]]Esa &#39;&#39;Sí&#39;&#39; es la opción más segura.&lt;/p&gt;
 
 &lt;div class=&quot;contenedor-imagen&quot;&gt;
 &lt;img src=&quot;assets/img/DonRamon_ha_ganado.png&quot; alt=&quot;Don Ramón ha ganado!.png&quot; /&gt;
@@ -234,14 +229,14 @@ img {
 &lt;audio autoplay&gt;
     &lt;source src=&quot;assets/sound/resp-correcta.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
     Your browser does not support the audio element.
-&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="5" name="Nivel 2" tags="" position="1100,300" size="100,100">Nivel 2
+&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="5" name="Nivel 2" tags="" position="1100,500" size="100,100">Nivel 2
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;h2&gt;Click! click!...&lt;/h2&gt;
 &lt;div class=&quot;contenedor-imagen&quot;&gt;
 &lt;img src=&quot;assets/img/Aurora_en_la_compu.jpg&quot; alt=&quot;Aurora en la compu&quot; /&gt;
 &lt;/div&gt;]
 
-&lt;p&gt;...&#39;&#39;Aurora&#39;&#39; estaba disfrutando de una tranquila tarde en su casa cuando recibió un correo electrónico sospechoso. El mensaje, supuestamente enviado por su banco...&lt;/p&gt;
-&lt;p&gt;¿Qué debería hacer Aurora?&lt;/p&gt;
+&lt;p&gt;&#39;&#39;Aurora&#39;&#39;, asustada y confundida, decidió actuar con cautela. Recordó haber leído sobre estafas de phishing y se puso a investigar más a fondo antes de hacer clic en cualquier enlace...&lt;/p&gt;
+&lt;p&gt;¿Qué debería hacer &#39;&#39;Aurora&#39;&#39;?&lt;/p&gt;
 &lt;div class=&quot;opciones&quot;&gt;
 (either: 
     &quot;&lt;p&gt;[(text-colour:lime)[[1) Hacer clic en el enlace del correo e iniciar sesión rápidamente-&gt;Incorrecta 2]]]&lt;/p&gt;
@@ -271,27 +266,26 @@ img {
 &lt;audio autoplay loop&gt;
     &lt;source src=&quot;assets/sound/tipeo-teclado.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
     Your browser does not support the audio element.
-&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="6" name="PreInicio" tags="" position="100,100" size="100,100">&lt;!--Pre-Inicio--&gt;
+&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="6" name="PreInicio" tags="" position="100,300" size="100,100">&lt;!--Pre-Inicio--&gt;
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;div class=&quot;titulo&quot;&gt;
 (text-style:&quot;fade-in-out&quot;)[&lt;h1&gt;¡Alerta Digital!&lt;/h1&gt;]
-&lt;h2&gt;Entrenador contra Ciberestafas&lt;/h2&gt;
-&lt;/div&gt;]
-=&gt;&lt;=
+&lt;h2&gt;Entrenador contra Ciberestafas&lt;/h2&gt;&lt;h4&gt;(juego &quot;prototipo&quot;)&lt;/h4&gt;
+&lt;/div&gt;
+&lt;!--=&gt;&lt;=--&gt;
 &lt;div class=&quot;contenedor-imagen&quot;&gt;
 &lt;img src=&quot;assets/img/anciano_en_caminadora_con_computadora.png&quot; alt=&quot;anciano en caminadora con computadora&quot; /&gt;
 &lt;/div&gt;
 
-[(text-style:&quot;sway&quot;)[(text-colour:orange)[[&#39;&#39;JUGAR EN &quot;MODO HISTORIA&quot;&#39;&#39;-&gt;Inicio]]]]
+[(text-style:&quot;sway&quot;)[(text-colour:orange)[[&#39;&#39;JUGAR EN &quot;MODO HISTORIA&quot;&#39;&#39;-&gt;Transicion]]]]
 
 &lt;p&gt;(text-colour:grey)[JUGAR EN &#39;&#39;MODO &quot;ENTRENAMIENTO&quot;&#39;&#39;
 (no disponible en este prototipo)]
 
-(text-colour:grey)[JUGAR EN &#39;&#39;MODO &quot;ALTO CONTRASTE&quot;&#39;&#39;
-(no disponible en este prototipo)]&lt;/p&gt;
+(text-colour:yellow)[[&#39;&#39;OPCIONES&#39;&#39;-&gt;Opciones]]
 
-&lt;p&gt;(text-colour:green)[[&#39;&#39;CRÉDITOS&#39;&#39;-&gt;creditos]]&lt;/p&gt;
+(text-colour:green)[[&#39;&#39;CRÉDITOS&#39;&#39;-&gt;creditos]]
 
-IMPORTANTE: Si bien es posible jugar con el celular en &quot;modo móvil&quot;, es recomendable utilizar la &quot;Vista/Modo de ordenador/computadora&quot; para una mejor experiencia de este prototipo</tw-passagedata><tw-passagedata pid="7" name="creditos" tags="" position="100,300" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;Entrenador contra Ciberestafas 1.0&#39;&#39;
+&lt;h5&gt;&#39;&#39;IMPORTANTE:&#39;&#39; Aunque es posible jugar en &#39;modo móvil&#39;, es recomendable usar la &#39;Vista/Modo de ordenador/computadora&#39; para una mejor experiencia o probar la &lt;a href=&quot;https://pablo-damian.github.io/Entrenador-contra-Ciberestafas-movil/&quot;&gt;(text-colour:cyan)[VERSIÓN MÓVIL&lt;/h5&gt;]]</tw-passagedata><tw-passagedata pid="7" name="creditos" tags="" position="100,500" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&#39;&#39;Entrenador contra Ciberestafas 1.0&#39;&#39;
 
 &#39;&#39;Victoria Arismendi&#39;&#39;: Arte y Game Desing
 
@@ -300,7 +294,9 @@ IMPORTANTE: Si bien es posible jugar con el celular en &quot;modo móvil&quot;, 
 &#39;&#39;Pablo Damián Combis&#39;&#39;: Programación y Sonido]
 
 
-&lt;p&gt;[(text-colour:red)[[VOLVER-&gt;PreInicio]]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="8" name="Correcta 2" tags="" position="1300,300" size="100,100">&lt;!--Correcta 1--&gt;
+&lt;p&gt;[(text-colour:orange)[[VOLVER-&gt;PreInicio]]]&lt;/p&gt;
+
+(align:&quot;==&gt;&quot;)[&lt;h5&gt;&lt;a href=&quot;https://github.com/Pablo-Damian/Entrenador-contra-Ciberestafas.git&quot; target=&quot;_blank&quot;&gt;(text-colour:cyan)[Repositorio en &#39;&#39;GitHub&#39;&#39;]&lt;/a&gt;&lt;/h5&gt;]</tw-passagedata><tw-passagedata pid="8" name="Correcta 2" tags="" position="1300,500" size="100,100">&lt;!--Correcta 1--&gt;
 &lt;div class=&quot;mensaje-exito&quot;&gt;
 &lt;p&gt;¡Excelente decisión! 🌟&lt;/p&gt;
 &lt;div class=&quot;contenedor-imagen&quot;&gt;
@@ -308,13 +304,16 @@ IMPORTANTE: Si bien es posible jugar con el celular en &quot;modo móvil&quot;, 
 &lt;/div&gt;
 &lt;p&gt;Has identificado correctamente un intento de &lt;b&gt;phishing&lt;/b&gt; (Suplantación de identidad por correo electrónico).&lt;/p&gt;
 &lt;p&gt;El phishing es una estafa donde los delincuentes envían correos electrónicos haciéndose pasar por entidades confiables para robar información personal o bancaria.&lt;/p&gt;
+
+...Gracias a su rápida acción, &#39;&#39;Aurora&#39;&#39; pudo proteger su información personal y financiera. Desde ese día, &#39;&#39;Aurora&#39;&#39; se convirtió en una defensora activa de la seguridad digital, compartiendo su experiencia con amigos y familiares para asegurarse de que todos estuvieran preparados para enfrentar situaciones similares...
+
 &lt;div class=&quot;opciones&quot;&gt;
 [(text-colour:orange)[[Continuar al siguiente nivel-&gt;Nivel x]]]
 &lt;/div&gt;
 &lt;audio autoplay&gt;
     &lt;source src=&quot;assets/sound/resp-correcta.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
     Your browser does not support the audio element.
-&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="9" name="Nivel x" tags="" position="1500,200" size="100,100">Nivel 3, 4, 5...
+&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="9" name="Nivel x" tags="" position="1500,400" size="100,100">Nivel 3, 4, 5...
 &lt;!--&lt;div class=&quot;contenedor-imagen&quot;&gt;
 &lt;img src=&quot;mensaje.jpg&quot; alt=&quot;Mensaje de texto sospechoso&quot; /&gt;
 &lt;/div&gt;--&gt;
@@ -331,7 +330,7 @@ Que continuaría con estos temas:
 
 Etc., etc., etc...
 
-&lt;p&gt;[(text-colour:red)[[volver al Inicio-&gt;PreInicio]]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="10" name="Inicio 2" tags="" position="900,200" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;div class=&quot;titulo&quot;&gt;
+&lt;p&gt;[(text-colour:red)[[volver al Inicio-&gt;PreInicio]]]&lt;/p&gt;</tw-passagedata><tw-passagedata pid="10" name="Inicio 2" tags="" position="900,400" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;div class=&quot;titulo&quot;&gt;
 (text-style:&quot;fade-in-out&quot;)[&lt;h1&gt;NIVEL 2&lt;/h1&gt;]
 &lt;h2&gt;Camino al Final Feliz&lt;/h2&gt;
 &lt;/div&gt;]
@@ -340,7 +339,7 @@ Etc., etc., etc...
 &lt;img src=&quot;assets/img/Aurora.jpg&quot; alt=&quot;Doña Aurora&quot; /&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Conoce ahora a &#39;&#39;Aurora&#39;&#39;, una abuela jubilada que estaba disfrutando de una tranquila tarde en su casa cuando recibió un correo electrónico sospechoso. El mensaje, supuestamente enviado por su banco, le informó que hubo una actividad inusual en su cuenta y que debía iniciar sesión urgentemente para verificar su información. El correo le advertía que, si no lo hacía, su cuenta &#39;&#39;podría ser bloqueada!&#39;&#39;...
+&lt;p&gt;Conoce ahora a &#39;&#39;Aurora&#39;&#39;, una abuela jubilada del partido de &#39;&#39;La Plata&#39;&#39; que estaba disfrutando de una tranquila tarde en su casa cuando recibió un correo electrónico sospechoso. El mensaje, supuestamente enviado por su banco, le informó que hubo una actividad inusual en su cuenta y que debía iniciar sesión urgentemente para verificar su información. El correo le advertía que, si no lo hacía, su cuenta &#39;&#39;podría ser bloqueada!&#39;&#39;...
 (text-colour:grey)[(La historia continua más allá de este &quot;prototipo&quot;)]&lt;/p&gt;
 
 (align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;p&gt;¿La ayudas a mantenerse segura?&lt;/p&gt;
@@ -353,12 +352,26 @@ Etc., etc., etc...
 &lt;audio autoplay loop&gt;
     &lt;source src=&quot;assets/sound/music_fx_jazz_bossa_Aurora.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
     Your browser does not support the audio element.
-&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="11" name="Transicion" tags="" position="300,400" size="100,100"></tw-passagedata><tw-passagedata pid="12" name="Incorrecta 2" tags="" position="1100,500" size="100,100">&lt;!--Incorrecta 1--&gt;
+&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="11" name="Transicion" tags="" position="300,600" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;div class=&quot;titulo&quot;&gt;
+&lt;!--(text-style:&quot;fade-in-out&quot;)--&gt;[&lt;h1&gt;NIVEL 1&lt;/h1&gt;]
+&lt;h2&gt;&#39;&#39;Vishing&#39;&#39; (Voice Phishing)&lt;/h2&gt;
+&lt;/div&gt;]
+
+&lt;div class=&quot;contenedor-imagen&quot;&gt;
+&lt;img src=&quot;assets/img/transicion-Ramon.jpg&quot; alt=&quot;Ramón y sospechozo hablando&quot; /&gt;
+&lt;/div&gt;
+
+&lt;audio autoplay loop&gt;
+    &lt;source src=&quot;assets/sound/cartoon-llamada.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+
+[(text-style:&quot;sway&quot;)[(text-colour:orange)[[Comenzar a jugar!-&gt;Inicio]]]]</tw-passagedata><tw-passagedata pid="12" name="Incorrecta 2" tags="" position="1100,700" size="100,100">&lt;!--Incorrecta 1--&gt;
 {
     (set: $intentos to it + 1)
 }
 &lt;div class=&quot;mensaje-error&quot;&gt;
-&lt;p&gt;(text-style:&quot;fade-in-out&quot;)[&#39;&#39;¡Cuidado Aurora!&#39;&#39; ]Esa no es la opción más segura.&lt;/p&gt;
+&lt;p&gt;(text-style:&quot;fade-in-out&quot;)[(text-colour:red)[&lt;h2&gt;&#39;&#39;¡Cuidado Aurora!&#39;&#39;&lt;/h2&gt; ] ]Esa no es la opción más segura.&lt;/p&gt;
 
 &lt;div class=&quot;contenedor-imagen&quot;&gt;
 &lt;img src=&quot;assets/img/Aurora_ha_perdido.jpg&quot; alt=&quot;Aurora ha perdido.png&quot; /&gt;
@@ -371,9 +384,8 @@ Etc., etc., etc...
 &lt;li&gt;Desconfía de mensajes que generen urgencia o miedo&lt;/li&gt;
 &lt;li&gt;Verifica la dirección del remitente cuidadosamente&lt;/li&gt;
 &lt;li&gt;No descargues archivos adjuntos de correos no solicitados&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
+&lt;/ul&gt;&lt;/div&gt;
+...Esta dolorosa experiencia dejó a &#39;&#39;Aurora&#39;&#39; más consciente de los peligros de las estafas de phishing. Aunque el impacto financiero fue significativo, lo que más le dolió fue la sensación de haber caído en la trampa. Sin embargo, decidió compartir su historia con amigos y familiares para advertirles y evitar que otros pasaran por lo mismo...
 
 &lt;div class=&quot;opciones&quot;&gt;
 [(text-colour:orange)[[Intentar de nuevo-&gt;Nivel 2]]]
@@ -382,7 +394,13 @@ Etc., etc., etc...
 &lt;audio autoplay&gt;
     &lt;source src=&quot;assets/sound/resp-incorrecta.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
     Your browser does not support the audio element.
-&lt;/audio&gt;</tw-passagedata></tw-storydata>
+&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="13" name="Opciones" tags="" position="100,100" size="100,100">(text-colour:grey)[JUGAR EN &#39;&#39;MODO &quot;ALTO CONTRASTE&quot;&#39;&#39;
+(no disponible en este prototipo)]&lt;/p&gt;
+
+(text-colour:grey)[AJUSTAR EL VOLUMEN DE LA &#39;&#39;MÚSICA&#39;&#39; Y LOS &#39;&#39;EFECTOS&#39;&#39;
+(no disponible en este prototipo)]&lt;/p&gt;
+
+&lt;p&gt;[(text-colour:orange)[[VOLVER-&gt;PreInicio]]]&lt;/p&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
